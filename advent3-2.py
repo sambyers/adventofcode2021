@@ -41,8 +41,8 @@ def get_co2(bin_lst, col):
     if col >= len(bin_lst[0]): return bin_lst
     elif len(bin_lst) == 1: return bin_lst
     else:
-        most_common = get_least_common_bitval_by_col(bin_lst, col)
-        matching_rows = get_rows_by_col_bitval(bin_lst, col, most_common[0])
+        least_common = get_least_common_bitval_by_col(bin_lst, col)
+        matching_rows = get_rows_by_col_bitval(bin_lst, col, least_common[0])
         col += 1
         return get_co2(matching_rows, col)
 
